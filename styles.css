@@ -1,0 +1,278 @@
+.my-container {
+  border: 1px solid black;
+  margin: 0;
+  padding: 0;
+}
+
+.sticky-top {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 1020; /*   stays above other content */
+}
+
+.my-border {
+  border-radius: 50px;
+  border: 3px solid black;
+}
+
+.text-justify {
+  max-width: 800px;
+  padding: 20px;
+  line-height: 1;
+}
+
+.full-height {
+  height: 100vh;
+}
+
+.hidden {
+  display: none;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  background-image: url("images/bg-dark.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  overflow: hidden;
+  transition: background-color 1s ease-out;
+  margin: 0;
+  height: 100vh;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+html::-webkit-scrollbar {
+  display: none;
+}
+
+html {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.carousel-inner {
+  width: 75%;
+  margin: 0 auto;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 400px;
+  object-fit: contain;
+}
+
+.carousel-control-prev-icon {
+  background-color: black;
+}
+
+.carousel-control-next-icon {
+  background-color: black;
+}
+
+.tech-logo {
+  width: 100px;
+  height: 100px;
+  border-radius: 30px;
+  transition: 0.4s All ease-in-out;
+  cursor: pointer;
+  animation: infiniteHover 5s infinite ease-in-out;
+}
+@keyframes infiniteHover {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+.tech-logo:hover {
+  transform: scale(1.2);
+}
+
+img {
+  -webkit-user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+.custom-tooltip[data-bs-placement="bottom"] .tooltip-inner {
+  margin-top: 1000px;
+}
+
+.brand-name {
+  color: rgb(251, 251, 251);
+  font-size: 25px;
+  font-weight: bold;
+  font-family: "Roboto", sans-serif;
+  text-shadow: 2px 1px 1px red, 2px 2px 1px red;
+}
+
+/* navbar custom */
+nav.circle ul li a {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+nav.circle ul li a:after {
+  display: block;
+  position: absolute;
+  margin: 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  content: ".";
+  color: transparent;
+  width: 1px;
+  height: 1px;
+  border-radius: 50%;
+  background: transparent;
+}
+nav.circle ul li a:hover:after {
+  -webkit-animation: circle 1.5s ease-in forwards;
+}
+
+@-webkit-keyframes fill {
+  0% {
+    width: 0%;
+    height: 1px;
+  }
+  50% {
+    width: 100%;
+    height: 1px;
+  }
+  100% {
+    width: 100%;
+    height: 100%;
+    background: #333;
+  }
+}
+
+@-webkit-keyframes circle {
+  0% {
+    width: 1px;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    height: 1px;
+    z-index: -1;
+    background: #eee;
+    border-radius: 100%;
+  }
+  100% {
+    background: #aaa;
+    height: 5000%;
+    width: 5000%;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    border-radius: 0;
+  }
+}
+
+/* preload */
+.loader {
+  width: 175px;
+  height: 80px;
+  display: block;
+  margin: 50vh auto;
+  transform: translateY(-50%);
+  background-image: radial-gradient(
+      circle 25px at 25px 25px,
+      #fff 100%,
+      transparent 0
+    ),
+    radial-gradient(circle 50px at 50px 50px, #fff 100%, transparent 0),
+    radial-gradient(circle 25px at 25px 25px, #fff 100%, transparent 0),
+    linear-gradient(#fff 50px, transparent 0);
+  background-size: 50px 50px, 100px 76px, 50px 50px, 120px 40px;
+  background-position: 0px 30px, 37px 0px, 122px 30px, 25px 40px;
+  background-repeat: no-repeat;
+  position: relative;
+  box-sizing: border-box;
+  transition: transform 1s ease-out;
+}
+
+.loader::after {
+  content: "";
+  left: 0;
+  right: 0;
+  margin: auto;
+  bottom: 20px;
+  position: absolute;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 5px solid transparent;
+  border-color: #ff3d00 transparent;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* hide the content initially */
+#content {
+  display: none;
+  background-color: rgb(252, 249, 249);
+  color: black;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 1s ease-in-out; /* fade-in effect */
+}
+
+/* hide the final content initially */
+#final-content {
+  display: none;
+  opacity: 0;
+  transition: opacity 1s ease-in-out; /* fade-in effect */
+}
+
+/* slide-up animation */
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 0;
+  }
+}
+
+.slide-up {
+  animation: slideUp 1s forwards;
+}
