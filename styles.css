@@ -307,9 +307,5 @@ nav.circle ul li a:hover:after {
     }
 }
 
-/* border image background */
-.border-image {
-  border-image: fill 0 linear-gradient(rgba(31, 30, 30, 0.25),#515050);
 
-}
 

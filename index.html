@@ -20,7 +20,7 @@
     <div id="content">
       <p id="hello-world">Welcome <i class="fa-regular fa-face-smile"></i></p>
       <div id="final-content">
-        <nav class="navbar navbar-expand-lg bg-warning  border-image circle sticky-top">
+        <nav class="navbar navbar-expand-lg bg-primary circle sticky-top">
           <div class="container-fluid">
             <a
               class="navbar-brand d-flex align-items-center gap-2"
@@ -76,7 +76,7 @@
           </div>
         </nav>
         <!-- first section -->
-        <section class="container-fluid bg-primary text-white border-image  " style="height: 100vh;" id="home">
+        <section class="container-fluid " style="height: 100vh;" id="home">
        
           <div class="row text-center d-flex justify-content-center" style="height: 100%;;">
             <div
@@ -561,19 +561,26 @@
           <h1>Contact me</h1>
           <!-- form -->
           <form class="row g-3" action="https://formsubmit.co/8ef4457520990abfbe5032d3e78921fa" method="POST">
+            <!-- Honeypot -->
+             <input type="text" name="_honey" style="display:none">
+
+             <!-- Disable Captcha -->
+             <input type="hidden" name="_captcha" value="false">
+
             <div class="col-md-4">
               <label for="firstName" class="form-label">First Name</label>
-              <input type="text" class="form-control" id="firstName" required />
+              <input type="text" class="form-control" name="firstName" id="firstName" required />
             </div>
             <div class="col-md-4">
               <label for="lastName" class="form-label">Last Name</label>
-              <input type="text" class="form-control" id="lastName" required />
+              <input type="text" class="form-control" name="lastName" id="lastName" required />
             </div>
             <div class="col-md-5">
               <label for="email" class="form-label">Email</label>
               <input
                 type="email"
                 class="form-control"
+                name="email"
                 id="email"
                 placeholder="e.g. coconut@mail.com"
                 required
@@ -584,6 +591,7 @@
               <input
                 type="text"
                 class="form-control"
+                name="phone"
                 id="phone"
                 placeholder="+60 123 456 789"
               />
@@ -592,6 +600,7 @@
               <label for="message" class="form-label">Message</label>
               <textarea
                 class="form-control"
+                name="message,&nbsp;comment"
                 id="message"
                 rows="4"
                 placeholder="Enter your message"
