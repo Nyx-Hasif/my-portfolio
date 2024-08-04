@@ -15,6 +15,9 @@
   border-radius: 50px;
   border: 3px solid black;
 }
+.my-shadow{
+  box-shadow: 0px 5px 15px rgba(141, 138, 138, 0.703); 
+}
 
 .text-justify {
   max-width: 800px;
@@ -276,3 +279,37 @@ nav.circle ul li a:hover:after {
 .slide-up {
   animation: slideUp 1s forwards;
 }
+
+
+/* text animation */
+.text-animation {
+    font-family: sans-serif;
+    font-size: 25px;
+    font-weight: 900;
+    background: linear-gradient(-45deg, #ee7752,
+    #e73c7e, #23a6d5, #fbfffe);
+    color: transparent;
+    background-size: 400% 400%;
+    background-clip: text;
+    animation: gradient 5s ease infinite;
+    -ms-text-overflow: clip;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* border image background */
+.border-image {
+  border-image: fill 0 linear-gradient(rgba(31, 30, 30, 0.25),#515050);
+
+}
+

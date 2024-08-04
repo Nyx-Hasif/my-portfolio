@@ -20,7 +20,7 @@
     <div id="content">
       <p id="hello-world">Welcome <i class="fa-regular fa-face-smile"></i></p>
       <div id="final-content">
-        <nav class="navbar navbar-expand-lg bg-primary circle sticky-top">
+        <nav class="navbar navbar-expand-lg bg-warning  border-image circle sticky-top">
           <div class="container-fluid">
             <a
               class="navbar-brand d-flex align-items-center gap-2"
@@ -33,7 +33,7 @@
                 height="50"
                 class="d-inline-block align-text-top"
               />
-              <span class="brand-name">Hasif</span>
+              <span class="text-animation">Hasif</span>
             </a>
             <button
               class="navbar-toggler"
@@ -75,16 +75,16 @@
             </div>
           </div>
         </nav>
-
-        <section class="container-fluid pt-3 pb-3" id="home">
-          <h1 class="px-5">Home</h1>
-          <div class="row text-center d-flex justify-content-center">
+        <!-- first section -->
+        <section class="container-fluid bg-primary text-white border-image  " style="height: 100vh;" id="home">
+       
+          <div class="row text-center d-flex justify-content-center" style="height: 100%;;">
             <div
               class="col-md-4 text-center d-flex flex-column justify-content-center align-items-center gap-1 p-2"
             >
               <img
                 src="images/mypic.jpg"
-                class="rounded-circle img-fluid"
+                class="rounded-circle img-fluid my-shadow"
                 width="500"
                 height="500"
                 alt="..."
@@ -94,7 +94,7 @@
                   <i class="fa-solid fa-file"></i> Download CV
                 </button>
                 <a class="btn btn-primary" href="#linked">
-                  <i class="fa-brands fa-linkedin"></i> Get Contact!</a
+                  <i class="fa-brands fa-linkedin"></i> Get Connect!</a
                 >
               </div>
             </div>
@@ -105,10 +105,11 @@
               experiences. Check out my projects and join me on my coding
               adventures!
             </h2>
-          </div>
+          </div>     
         </section>
-        <section class="container-fluid p-5" id="about">
-          <h1>About Me</h1>
+        <!-- second section -->
+        <section class="container-fluid"   id="about">
+          <h1 class="px-4 ">About Me</h1>
           <div class="row text-center justify-content-center p-3 gap-4">
             <div class="col-md-4 my-border">
               <img
@@ -135,7 +136,8 @@
               <p>B.Sc in Electrical and Electronic Engineering</p>
             </div>
           </div>
-          <p>
+          <div class=" text-center p-5">
+            <p>
             I'm on a mission to create delightful digital experiences. As a
             self-taught frontend enthusiast, I've tinkered with everything from
             vanilla JavaScript to modern frameworks like React. When I'm not
@@ -143,7 +145,9 @@
             ideas, or exploring new hiking trails.
           </p>
 
-          <p>Experience tech tools:</p>
+          <p>Experienced tech tools:</p>
+          </div>
+          
           <ul
             class="list-unstyled d-flex flex-wrap justify-content-center gap-4"
           >
@@ -299,19 +303,28 @@
             </div>
           </div>
         </section>
-        <section class="container-fluid p-5" id="portfolio">
-          <h1>Portfolio projects</h1>
+        <!-- third section -->
+        <section class="container-fluid p-5 overflow-auto .bg-body-secondary border-image" style="height: 100vh;" id="portfolio">
+          <h1>Latest projects</h1>
           <!-- card -->
           <div class="row row-cols-1 row-cols-md-4 g-3" id="portfolio-row">
             <div class="col">
               <div class="card h-100">
                 <img
                   src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSiruV7oyeX7QdNSKOczxcDc-irfpOxITqpmw&s"
-                  class="card-img-top"
+                  class="card-img-top img-fluid"
                   alt="..."
+                  
+                 
                 />
                 <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
+                  <div class="d-flex justify-content-between">
+                    <h5 class="card-title">Card title</h5>
+                    <div class="d-flex gap-2">
+                      <a href="#"><i class="fa-brands fa-github fa-lg"></i></a>
+                      <a href="#"><i class="fa-solid fa-eye fa-lg"></i></a>
+                    </div>
+                  </div>
                   <p class="card-text">
                     This is a longer card with supporting text below as a
                     natural lead-in to additional content. This content is a
@@ -325,11 +338,17 @@
               <div class="card h-100">
                 <img
                   src="https://assets.justinmind.com/wp-content/uploads/2021/11/vibrant-web-design-portfolio-template.png"
-                  class="card-img-top"
-                  alt="..."
+                  class="card-img-top img-fluid"
+                  alt="..."        
                 />
                 <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
+                  <div class="d-flex justify-content-between">
+                    <h5 class="card-title">Card title</h5>
+                    <div class="d-flex gap-2">
+                      <a href="#"><i class="fa-brands fa-github fa-lg"></i></a>
+                      <a href="#"><i class="fa-solid fa-eye fa-lg"></i></a>
+                    </div>
+                  </div>
                   <p class="card-text">
                     This is a longer card with supporting text below as a
                     natural lead-in to additional content. This content is a
@@ -347,7 +366,13 @@
                   alt="..."
                 />
                 <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
+                 <div class="d-flex justify-content-between">
+                    <h5 class="card-title">Card title</h5>
+                    <div class="d-flex gap-2">
+                      <a href="#"><i class="fa-brands fa-github fa-lg"></i></a>
+                      <a href="#"><i class="fa-solid fa-eye fa-lg"></i></a>
+                    </div>
+                  </div>
                   <p class="card-text">
                     This is a longer card with supporting text below as a
                     natural lead-in to additional content. This content is a
@@ -365,7 +390,13 @@
                   alt="..."
                 />
                 <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
+                  <div class="d-flex justify-content-between">
+                    <h5 class="card-title">Card title</h5>
+                    <div class="d-flex gap-2">
+                      <a href="#"><i class="fa-brands fa-github fa-lg"></i></a>
+                      <a href="#"><i class="fa-solid fa-eye fa-lg"></i></a>
+                    </div>
+                  </div>
                   <p class="card-text">
                     This is a longer card with supporting text below as a
                     natural lead-in to additional content. This content is a
@@ -383,7 +414,13 @@
                   alt="..."
                 />
                 <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
+                  <div class="d-flex justify-content-between">
+                    <h5 class="card-title">Card title</h5>
+                    <div class="d-flex gap-2">
+                      <a href="#"><i class="fa-brands fa-github fa-lg"></i></a>
+                      <a href="#"><i class="fa-solid fa-eye fa-lg"></i></a>
+                    </div>
+                  </div>
                   <p class="card-text">
                     This is a longer card with supporting text below as a
                     natural lead-in to additional content. This content is a
@@ -401,7 +438,13 @@
                   alt="..."
                 />
                 <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
+                  <div class="d-flex justify-content-between">
+                    <h5 class="card-title">Card title</h5>
+                    <div class="d-flex gap-2">
+                      <a href="#"><i class="fa-brands fa-github fa-lg"></i></a>
+                      <a href="#"><i class="fa-solid fa-eye fa-lg"></i></a>
+                    </div>
+                  </div>
                   <p class="card-text">
                     This is a longer card with supporting text below as a
                     natural lead-in to additional content. This content is a
@@ -419,7 +462,13 @@
                   alt="..."
                 />
                 <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
+                  <div class="d-flex justify-content-between">
+                    <h5 class="card-title">Card title</h5>
+                    <div class="d-flex gap-2">
+                      <a href="#"><i class="fa-brands fa-github fa-lg"></i></a>
+                      <a href="#"><i class="fa-solid fa-eye fa-lg"></i></a>
+                    </div>
+                  </div>
                   <p class="card-text">
                     This is a longer card with supporting text below as a
                     natural lead-in to additional content. This content is a
@@ -437,7 +486,13 @@
                   alt="..."
                 />
                 <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
+                  <div class="d-flex justify-content-between">
+                    <h5 class="card-title">Card title</h5>
+                    <div class="d-flex gap-2">
+                      <a href="#"><i class="fa-brands fa-github fa-lg"></i></a>
+                      <a href="#"><i class="fa-solid fa-eye fa-lg"></i></a>
+                    </div>
+                  </div>
                   <p class="card-text">
                     This is a longer card with supporting text below as a
                     natural lead-in to additional content. This content is a
@@ -455,7 +510,13 @@
                   alt="..."
                 />
                 <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
+                  <div class="d-flex justify-content-between">
+                    <h5 class="card-title">Card title</h5>
+                    <div class="d-flex gap-2">
+                      <a href="#"><i class="fa-brands fa-github fa-lg"></i></a>
+                      <a href="#"><i class="fa-solid fa-eye fa-lg"></i></a>
+                    </div>
+                  </div>
                   <p class="card-text">
                     This is a longer card with supporting text below as a
                     natural lead-in to additional content. This content is a
@@ -473,7 +534,13 @@
                   alt="..."
                 />
                 <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
+                  <div class="d-flex justify-content-between">
+                    <h5 class="card-title">Card title</h5>
+                    <div class="d-flex gap-2">
+                      <a href="#"><i class="fa-brands fa-github fa-lg"></i></a>
+                      <a href="#"><i class="fa-solid fa-eye fa-lg"></i></a>
+                    </div>
+                  </div>
                   <p class="card-text">
                     This is a longer card with supporting text below as a
                     natural lead-in to additional content. This content is a
@@ -488,10 +555,12 @@
             </div>
           </div>
         </section>
-        <section class="container-fluid full-height p-5" id="contact">
+
+        <!-- contact section -->
+        <section class="container-fluid full-height p-5 " style="height: 100vh;" id="contact">
           <h1>Contact me</h1>
           <!-- form -->
-          <form class="row g-3" action="">
+          <form class="row g-3" action="https://formsubmit.co/nikaresif97@gmail.com" method="POST">
             <div class="col-md-4">
               <label for="firstName" class="form-label">First Name</label>
               <input type="text" class="form-control" id="firstName" required />
